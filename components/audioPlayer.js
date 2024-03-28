@@ -1,15 +1,13 @@
-// AudioPlayer.js
-
 import React from 'react';
 
-function AudioPlayer() {
+function AudioPlayer({ src }) {
+  console.log("src is:" + src);
   return (
     <div>
       <audio controls>
-        <source src="your-audio-file.mp3" type="audio/mp3" />
+      <source src={process.env.PUBLIC_URL + src} type="audio/wav" />
       </audio>
     </div>
+
   );
 }
-
-export default AudioPlayer;
